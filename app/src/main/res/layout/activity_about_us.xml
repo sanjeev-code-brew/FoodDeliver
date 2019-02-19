@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.main.aboutus.AboutUsActivity">
+
+    <include
+        android:id="@+id/incLayout"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAboutApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="@color/newvigation_text_color"
+        android:textSize="@dimen/text_small"
+        android:text="@string/about_neqsa_app"
+        android:paddingTop="@dimen/padding_twenty"
+        android:paddingBottom="@dimen/padding_twenty"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        app:layout_constraintTop_toBottomOf="@id/incLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incLayout"
+        android:layout_marginEnd="@dimen/margin_sixteen"
+        android:paddingTop="@dimen/padding_twenty"
+        android:paddingBottom="@dimen/padding_twenty"
+        android:src="@drawable/ic_small_fwd" />
+
+    <View
+        android:id="@+id/viewAboutApp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_one"
+        android:background="@color/view_color"
+        app:layout_constraintTop_toBottomOf="@+id/tvAboutApp"/>
+
+    <TextView
+        android:id="@+id/tvTermConditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="@color/newvigation_text_color"
+        android:textSize="@dimen/text_small"
+        android:text="@string/terms_conditions"
+        android:paddingTop="@dimen/padding_twenty"
+        android:paddingBottom="@dimen/padding_twenty"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        app:layout_constraintTop_toBottomOf="@id/viewAboutApp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivForwardTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewAboutApp"
+        android:layout_marginEnd="@dimen/margin_sixteen"
+        android:paddingTop="@dimen/padding_twenty"
+        android:paddingBottom="@dimen/padding_twenty"
+        android:src="@drawable/ic_small_fwd" />
+
+    <View
+        android:id="@+id/viewTermsConditions"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_one"
+        android:background="@color/view_color"
+        app:layout_constraintTop_toBottomOf="@+id/tvTermConditions"/>
+
+    <TextView
+        android:id="@+id/tvPrivacyPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_text_regular"
+        android:textColor="@color/newvigation_text_color"
+        android:textSize="@dimen/text_small"
+        android:text="@string/privacy_policy"
+        android:paddingTop="@dimen/padding_twenty"
+        android:paddingBottom="@dimen/padding_twenty"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        app:layout_constraintTop_toBottomOf="@id/viewTermsConditions"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivForwardThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTermsConditions"
+        android:layout_marginEnd="@dimen/margin_sixteen"
+        android:paddingTop="@dimen/padding_twenty"
+        android:paddingBottom="@dimen/padding_twenty"
+        android:src="@drawable/ic_small_fwd" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_one"
+        android:background="@color/view_color"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrivacyPolicy"/>
+
+</android.support.constraint.ConstraintLayout>

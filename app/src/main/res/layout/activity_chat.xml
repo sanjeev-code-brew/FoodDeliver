@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.help.ChatActivity">
+
+    <include
+        android:id="@+id/incLayout"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_twenty_four"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incLayout" />
+
+    <LinearLayout
+        android:id="@+id/laoutChat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        android:layout_marginEnd="@dimen/margin_twelve"
+        android:layout_marginBottom="@dimen/margin_twenty_four"
+        android:background="@drawable/rounded_chat_et"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnSend"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:padding="@dimen/padding_sixteen"
+            android:src="@drawable/ic_add" />
+
+        <EditText
+            android:id="@+id/etMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/margin_sixteen"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:hint="@string/write_down_your_msg"
+            android:inputType="textCapSentences|text|textMultiLine"
+            android:paddingTop="@dimen/padding_sixteen"
+            android:paddingRight="@dimen/padding_sixteen"
+            android:paddingBottom="@dimen/padding_sixteen"
+            android:textColor="@color/chat_msg_color"
+            android:textColorHint="@color/chat_msg_color"
+            android:textSize="@dimen/text_small" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_sixteen"
+        android:layout_marginBottom="@dimen/margin_twenty_four"
+        android:backgroundTint="@color/pink"
+        android:src="@drawable/ic_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

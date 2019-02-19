@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_twenty_four"
+    android:layout_marginTop="@dimen/margin_eight"
+    android:layout_marginBottom="@dimen/margin_eight"
+    android:layout_marginStart="@dimen/margin_twenty_four">
+
+    <RelativeLayout
+        android:id="@+id/rlItem"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toStartOf="@id/llItemDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.app.fooddeliver.utils.RoundishImageView
+            android:id="@+id/ivItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dummy_img"
+            app:cornerRadius="@dimen/margin_four"
+            app:roundedCorners="all" />
+
+        <ImageView
+            android:id="@+id/ivLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/padding_eight"
+            android:src="@drawable/ic_heart" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llItemDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        android:layout_marginTop="@dimen/margin_eight"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/rlItem"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:maxLines="1"
+            android:text="Dev's American cafe"
+            android:textColor="@color/filter_color"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/tvItemSubDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_four"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:maxLines="2"
+            android:text="American, Continental and Chinese"
+            android:textColor="@color/explore_text_color"
+            android:textSize="@dimen/text_extra_small" />
+
+        <TextView
+            android:id="@+id/tvOffer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_four"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:maxLines="1"
+            android:text="20% off on all order"
+            android:textColor="@color/rate_order_sub_text_color"
+            android:textSize="@dimen/text_extra_small" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        android:layout_marginBottom="@dimen/margin_twelve"
+        android:background="@drawable/rounded_rec_green"
+        android:drawableRight="@drawable/ic_star_small"
+        android:drawablePadding="@dimen/padding_two"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:paddingLeft="@dimen/padding_six"
+        android:paddingTop="@dimen/padding_two"
+        android:paddingRight="@dimen/padding_six"
+        android:paddingBottom="@dimen/padding_two"
+        android:text="4.0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_extra_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rlItem" />
+
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_twelve"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:maxLines="1"
+        android:text="3.0 miles away"
+        android:textColor="@color/filter_color"
+        android:textSize="@dimen/text_extra_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

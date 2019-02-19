@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.trackorder.TrackOrderActivity">
+
+    <include
+        android:id="@+id/incLayout"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_seventy_five">
+
+            <ImageView
+                android:id="@+id/mapTracker"
+                android:layout_width="match_parent"
+                android:layout_height="348dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dummy_img" />
+
+            <TextView
+                android:id="@+id/tvOrderPicked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_upward"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:paddingLeft="@dimen/margin_twenty_four"
+                android:paddingTop="@dimen/margin_sixteen"
+                android:paddingRight="@dimen/margin_twenty_four"
+                android:paddingBottom="@dimen/padding_sixteen"
+                android:text="@string/your_order_picked"
+                android:textColor="@color/track_text_color"
+                android:textSize="@dimen/text_small" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutOrderStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="@dimen/margin_sixteen"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderPicked">
+
+                <View
+                    android:id="@+id/viewOrderPicked"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_one"
+                    android:background="@color/view_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivPickedByDriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_twenty_four"
+                    android:layout_marginTop="@dimen/margin_twenty"
+                    android:src="@drawable/ic_dot_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewOrderPicked" />
+
+                <TextView
+                    android:id="@+id/tvPickedByDriver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_sixteen"
+                    android:layout_marginTop="@dimen/margin_twelve"
+                    android:layout_marginEnd="@dimen/margin_twenty_four"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/order_picked_by_driver"
+                    android:textColor="@color/track_text_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintLeft_toRightOf="@+id/ivPickedByDriver"
+                    app:layout_constraintStart_toEndOf="@+id/ivPickedByDriver"
+                    app:layout_constraintTop_toBottomOf="@+id/viewOrderPicked" />
+
+                <ImageView
+                    android:id="@+id/ivPreparingOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_twenty_four"
+                    android:layout_marginTop="@dimen/margin_eight"
+                    android:src="@drawable/ic_dot_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPickedByDriver" />
+
+                <TextView
+                    android:id="@+id/tvPreparingOrder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_sixteen"
+                    android:layout_marginEnd="@dimen/margin_twenty_four"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/rest_preparing_order"
+                    android:textColor="@color/track_text_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintStart_toEndOf="@id/ivPreparingOrder"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPickedByDriver" />
+
+                <TextView
+                    android:id="@+id/tvOrderAccepted"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_twenty_four"
+                    android:layout_marginEnd="@dimen/margin_twenty_four"
+                    android:drawableLeft="@drawable/ic_status"
+                    android:drawablePadding="@dimen/padding_sixteen"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/order_accepted"
+                    android:textColor="@color/track_text_color"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPreparingOrder" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/viewOrderAccepted"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_one"
+                android:background="@color/view_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginEnd="@dimen/margin_sixteen">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin_sixteen"
+                    android:src="@drawable/dummy_user" />
+
+                <TextView
+                    android:id="@+id/tvDriverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_twelve"
+                    android:layout_marginTop="@dimen/margin_twelve"
+                    android:layout_toLeftOf="@+id/tvContact"
+                    android:layout_toRightOf="@+id/ivUser"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="center_vertical"
+                    android:text="Glen Chambers"
+                    android:textColor="@color/track_text_color"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:id="@+id/tvDeliveryPartner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDriverName"
+                    android:layout_marginStart="@dimen/margin_twelve"
+                    android:layout_toLeftOf="@+id/tvContact"
+                    android:layout_toRightOf="@+id/ivUser"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:text="@string/delivery_partner"
+                    android:textColor="#FF6D7782"
+                    android:textSize="@dimen/text_extra_small"
+                    app:layout_constraintEnd_toStartOf="@+id/tvContact" />
+
+                <TextView
+                    android:id="@+id/tvContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin_sixteen"
+                    android:background="@drawable/rec_green"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:paddingLeft="@dimen/padding_twenty_eight"
+                    android:paddingTop="@dimen/padding_eight"
+                    android:paddingRight="@dimen/padding_twenty_eight"
+                    android:paddingBottom="@dimen/padding_eight"
+                    android:text="@string/contact"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

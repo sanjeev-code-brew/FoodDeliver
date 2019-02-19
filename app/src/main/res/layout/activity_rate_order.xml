@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.rateorder.RateOrderActivity">
+
+    <include
+        android:id="@+id/incLayout"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incLayout">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?actionBarSize">
+
+            <RelativeLayout
+                android:id="@+id/rlItmeImg"
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dummy_img" />
+
+                <RelativeLayout
+                    android:id="@+id/rlRestName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/margin_eight">
+
+                    <TextView
+                        android:id="@+id/tvRestName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_ten"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:text="Starbucks"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small_large" />
+
+                    <TextView
+                        android:id="@+id/tvItemName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvRestName"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/margin_eight"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/sf_pro_display_regular"
+                        android:text="Coffee and Sweets"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_extra_small" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvRateFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_sixteen"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/please_rate_the_food"
+                android:textColor="@color/rate_order_text_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlItmeImg" />
+
+            <TextView
+                android:id="@+id/tvRateFoodTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_five"
+                android:layout_marginEnd="@dimen/margin_sixteen"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/rating_inspect_food_quality"
+                android:textColor="@color/rate_order_sub_text_color"
+                android:textSize="@dimen/text_extra_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRateFood" />
+
+            <LinearLayout
+                android:id="@+id/llRateFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_twelve"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRateFoodTxt">
+
+                <ImageView
+                    android:id="@+id/ivFoodStar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivFoodStar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivFoodStar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivFoodStar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivFoodStar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRateRest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_sixteen"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/please_rate_the_rest"
+                android:textColor="@color/rate_order_text_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llRateFood" />
+
+            <TextView
+                android:id="@+id/tvRateRestTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_five"
+                android:layout_marginEnd="@dimen/margin_sixteen"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/rest_rating_text"
+                android:textColor="@color/rate_order_sub_text_color"
+                android:textSize="@dimen/text_extra_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRateRest" />
+
+            <LinearLayout
+                android:id="@+id/llRateRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_twelve"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRateRestTxt">
+
+                <ImageView
+                    android:id="@+id/ivRestStar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivRestStar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivRestStar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivRestStar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivRestStar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRateDeliBoy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_sixteen"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/please_rate_delivery_boy"
+                android:textColor="@color/rate_order_text_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llRateRest" />
+
+            <TextView
+                android:id="@+id/tvRateDeliBoytxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_five"
+                android:layout_marginEnd="@dimen/margin_sixteen"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/ur_feedback_will_improve_him"
+                android:textColor="@color/rate_order_sub_text_color"
+                android:textSize="@dimen/text_extra_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRateDeliBoy" />
+
+            <LinearLayout
+                android:id="@+id/llRateDeliBoy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_twelve"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRateDeliBoytxt">
+
+                <ImageView
+                    android:id="@+id/ivDeliBoyStar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivDeliBoyStar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivDeliBoyStar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivDeliBoyStar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:id="@+id/ivDeliBoyStar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_eight"
+                    android:src="@drawable/ic_star_empty" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvOrderOnTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/was_order_on_time"
+                android:textColor="@color/rate_order_text_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llRateDeliBoy" />
+
+            <TextView
+                android:id="@+id/tvOrderOnTimeYes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_twelve"
+                android:background="@drawable/rd_rate_order_rec"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:paddingLeft="@dimen/padding_twenty"
+                android:paddingTop="@dimen/padding_four"
+                android:paddingRight="@dimen/padding_twenty"
+                android:paddingBottom="@dimen/padding_four"
+                android:text="@string/yes"
+                android:textColor="#FFC6C6C6"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toStartOf="@id/tvOrderOnTimeNo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderOnTime" />
+
+            <TextView
+                android:id="@+id/tvOrderOnTimeNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_twelve"
+                android:background="@drawable/rd_rate_order_rec"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:paddingLeft="@dimen/padding_twenty_four"
+                android:paddingTop="@dimen/padding_four"
+                android:paddingRight="@dimen/padding_twenty_four"
+                android:paddingBottom="@dimen/padding_four"
+                android:text="@string/no"
+                android:textColor="#FFC6C6C6"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toEndOf="@id/tvOrderOnTimeYes"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderOnTime" />
+
+            <TextView
+                android:id="@+id/tvUserFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="@string/your_feedback"
+                android:textColor="@color/rate_order_text_color"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrderOnTimeYes" />
+
+            <EditText
+                android:id="@+id/etComments"
+                android:layout_width="match_parent"
+                android:layout_height="104dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_sixteen"
+                android:layout_marginTop="@dimen/margin_eight"
+                android:layout_marginEnd="@dimen/margin_sixteen"
+                android:background="@drawable/rd_comments_rec"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:gravity="top"
+                android:hint="@string/write_down_your_msg"
+                android:inputType="textCapSentences|text|textMultiLine"
+                android:padding="@dimen/padding_sixteen"
+                android:textColor="#FFA0A0A0"
+                android:textColorHint="#FFA0A0A0"
+                android:textSize="@dimen/text_extra_small"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserFeedback" />
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_forty_eight"
+                android:layout_marginTop="@dimen/margin_twenty"
+                android:background="@color/pink"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:stateListAnimator="@null"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etComments" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.constraint.ConstraintLayout>

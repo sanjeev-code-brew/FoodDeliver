@@ -1,0 +1,72 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--EditText hint color-->
+        <item name="android:textColorHint">@color/light_gray</item>
+        <!-- TextInputLayout text color-->
+        <item name="colorControlActivated">@color/pink</item>
+        <!-- EditText line color when EditText on-focus-->
+        <item name="colorControlHighlight">@color/pink</item>
+        <!-- EditText line color when EditText  in un-focus-->
+        <item name="colorControlNormal">@color/light_gray</item>
+    </style>
+
+    <style name="HintText" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="ProgressDialogTheme">    
+                <item name="android:windowFrame">@null</item>   
+                <item name="android:windowBackground">@android:color/transparent</item>   
+                <item name="android:windowIsFloating">true</item>   
+                <item name="android:windowContentOverlay">@null</item>    
+                <item name="android:windowTitleStyle">@null</item>    
+                <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>  
+                <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>  
+                <item name="android:backgroundDimEnabled">true</item>  
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!--custom dialog-->
+    <style name="CustomDialog" parent="@android:style/Theme.DeviceDefault.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name = "MyDialog" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name = "android:windowContentOverlay" >@null</item >
+        <item name = "android:colorBackgroundCacheHint" >@null</item >
+        <item name = "android:backgroundDimEnabled">true</item>
+        <item name = "android:windowBackground">@color/transparent_image</item >
+    </style >
+
+    <style name="MyTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:layout_marginStart">@dimen/margin_twenty_four</item>
+    </style>
+
+    <style name="MyTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyTextAppearance</item>
+    </style>
+
+</resources>

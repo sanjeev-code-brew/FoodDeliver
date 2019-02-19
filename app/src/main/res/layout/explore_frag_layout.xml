@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvTotalRest"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_twenty_four"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="@string/your_order_picked"
+        android:textColor="@color/rate_order_text_color"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFilterSort"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_twenty_four"
+        android:drawableRight="@drawable/ic_filter"
+        android:drawablePadding="@dimen/padding_four"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:paddingTop="@dimen/margin_sixteen"
+        android:paddingBottom="@dimen/padding_sixteen"
+        android:text="@string/your_order_picked"
+        android:textColor="@color/filter_color"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewRestDish"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_twenty_four"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalRest" />
+
+</android.support.constraint.ConstraintLayout>

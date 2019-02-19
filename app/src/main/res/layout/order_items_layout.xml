@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_sixteen">
+
+    <RelativeLayout
+        android:id="@+id/rlItmeImg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_sixty"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dummy_img" />
+
+        <RelativeLayout
+            android:id="@+id/rlRestName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_eight">
+
+            <TextView
+                android:id="@+id/tvRestName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:layout_toLeftOf="@+id/tvRating"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Starbucks"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small_large" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/rounded_rec_green"
+                android:drawableLeft="@drawable/ic_star_small"
+                android:drawablePadding="@dimen/padding_two"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:paddingLeft="@dimen/padding_six"
+                android:paddingTop="@dimen/padding_two"
+                android:paddingRight="@dimen/padding_six"
+                android:paddingBottom="@dimen/padding_two"
+                android:text="4.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_extra_small" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlRestName"
+            android:layout_marginStart="@dimen/margin_eight"
+            android:layout_marginEnd="@dimen/margin_eight"
+            android:layout_marginBottom="@dimen/margin_four">
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/tvTime"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="Coffee and Sweets"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_extra_small" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:text="15-30 mins"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_extra_small" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDelivered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_twenty_four"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="@string/preparing_order"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlItmeImg" />
+
+    <TextView
+        android:id="@+id/tvOrderTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_twenty_four"
+        android:layout_marginTop="@dimen/margin_five"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="8-Aug-2019 at 10:35 AM"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_extra_small"
+        app:layout_constraintEnd_toStartOf="@id/rlRateReorder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDelivered" />
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_twenty_four"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="Order ID: 19C4A"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_extra_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOrderTime" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlRateReorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:layout_marginEnd="@dimen/margin_twenty_four"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlItmeImg">
+
+        <TextView
+            android:id="@+id/tvTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/track_bg_item"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingLeft="@dimen/padding_twenty_four"
+            android:paddingTop="@dimen/padding_eight"
+            android:paddingRight="@dimen/padding_twenty_four"
+            android:paddingBottom="@dimen/padding_eight"
+            android:text="@string/track"
+            android:textColor="@color/btn_text_light_gray"
+            android:textSize="@dimen/text_medium" />
+
+        <TextView
+            android:id="@+id/tvReorder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rec_green"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:paddingLeft="@dimen/padding_twenty_eight"
+            android:paddingTop="@dimen/padding_eight"
+            android:paddingRight="@dimen/padding_twenty_eight"
+            android:paddingBottom="@dimen/padding_eight"
+            android:text="@string/re_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_eight"
+        android:layout_marginEnd="@dimen/margin_twenty_four"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:text="Total: 465 AED"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvOrderId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlRateReorder" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotal">
+
+        <Button
+            android:id="@+id/btnViewReceipt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_forty_eight"
+            android:layout_weight="1"
+            android:background="@drawable/rec_light_gray"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:stateListAnimator="@null"
+            android:text="@string/view_receipt"
+            android:textColor="@color/btn_text_light_gray"
+            android:textSize="@dimen/text_extra_small" />
+
+        <View
+            android:layout_width="@dimen/view_two"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/btnGetHelp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_forty_eight"
+            android:layout_weight="1"
+            android:background="@drawable/rec_light_gray"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:stateListAnimator="@null"
+            android:text="@string/get_help"
+            android:textColor="@color/btn_text_light_gray"
+            android:textSize="@dimen/text_extra_small" />
+
+        <Button
+            android:id="@+id/btnRateOrder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_forty_eight"
+            android:layout_weight="1"
+            android:background="@drawable/rec_light_gray"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:stateListAnimator="@null"
+            android:visibility="gone"
+            android:text="@string/rate_order"
+            android:textColor="@color/btn_text_light_gray"
+            android:textSize="@dimen/text_extra_small" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_twenty_four"
+    android:layout_marginTop="@dimen/margin_eight"
+    android:layout_marginBottom="@dimen/margin_eight"
+    android:layout_marginEnd="@dimen/margin_twenty_four"
+    android:background="@color/white">
+
+    <CheckBox
+        android:id="@+id/chkAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:button="@drawable/chkbox_add"
+        android:fontFamily="@font/sf_pro_display_regular"
+        android:paddingLeft="@dimen/padding_eight"
+        android:text="3065 Kirlin Prairie Suite 200, Secto 29D, oppo. Tribune colony Chandigarh 160030"
+        android:textColor="@color/search_text_color"
+        android:textSize="@dimen/text_small_medium"
+        app:layout_constraintEnd_toStartOf="@id/ivDelete"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="@dimen/margin_thirty_two"
+        android:gravity="top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_sixteen"
+        android:paddingBottom="@dimen/padding_sixteen"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

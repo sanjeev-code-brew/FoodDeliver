@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.orders.OrdersActivity">
+
+    <include
+        android:id="@+id/incLayout"
+        layout="@layout/toolbar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUpcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:layout_marginEnd="@dimen/margin_sixteen"
+        android:background="@drawable/rounded_pink_bg"
+        android:paddingLeft="@dimen/padding_sixteen"
+        android:paddingTop="@dimen/padding_eight"
+        android:paddingRight="@dimen/padding_sixteen"
+        android:paddingBottom="@dimen/padding_eight"
+        android:text="@string/upcoming"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintEnd_toStartOf="@id/tvPast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incLayout" />
+
+    <TextView
+        android:id="@+id/tvPast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sixteen"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        android:background="@drawable/rounded_order_btn_bg"
+        android:paddingLeft="@dimen/padding_twenty_four"
+        android:paddingTop="@dimen/padding_eight"
+        android:paddingRight="@dimen/padding_twenty_four"
+        android:paddingBottom="@dimen/padding_eight"
+        android:text="@string/past"
+        android:textColor="@color/search_text_color"
+        android:textSize="@dimen/text_medium"
+        app:layout_constraintStart_toEndOf="@id/tvUpcoming"
+        app:layout_constraintTop_toBottomOf="@+id/incLayout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewOrders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_sixteen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUpcoming"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+</android.support.constraint.ConstraintLayout>

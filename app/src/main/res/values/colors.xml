@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E680A9</color>
+    <color name="colorPrimaryDark">#E680A9</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="pink">#E680A9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent_image">#7e141414</color>
+    <color name="light_gray">#99FFFFFF</color>
+    <color name="light_black">#A8000000</color>
+    <color name="green">#459D72</color>
+    <color name="view_color">#E7E7E7</color>
+    <color name="btn_lignt_gray">#D8D8D8</color>
+    <color name="btn_text_light_gray">#6D7782</color>
+    <color name="header_text_color">#342B2B</color>
+    <color name="search_text_color">#A0A0A0</color>
+    <color name="location_text_color">#342B2B</color>
+    <color name="light_green">#24459D72</color>
+    <color name="light_red">#F25F0A</color>
+    <color name="btn_place_order_color">#6D7782</color>
+    <color name="newvigation_text_color">#080808</color>
+    <color name="chat_msg_color">#703E3E3E</color>
+    <color name="blue_color">#4979EB</color>
+    <color name="btn_order_color">#CCCCCC</color>
+    <color name="tv_border_color">#979797</color>
+    <color name="rate_order_text_color">#FF080808</color>
+    <color name="rate_order_sub_text_color">#FFA0A0A0</color>
+    <color name="track_text_color">#FF26353A</color>
+    <color name="explore_text_color">#FF342B2B</color>
+    <color name="filter_color">#FF000000</color>
+
+</resources>
